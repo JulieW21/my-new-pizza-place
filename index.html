@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144351462-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-144351462-1');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Pizza Place</title>
+  <link href="https://fonts.googleapis.com/css?family=Arima+Madurai|Cormorant|Eczar|El+Messiri|Itim|Sancreek|Wallpoet&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/wickedcss.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+  <header>
+    <div class="view landing">
+      <div id="overlay">
+          <nav class="navbar navbar-expand-sm bg-success navbar-dark fixed-top">
+          <div class="col-md-12 mb-4 white-text text-center text">
+            <a class="navbar-brand" href="#">My Pizza Place</a>
+          </div> 
+          </nav>
+          <div class="mask rgba-black-light align-items-center">
+            <div class="container" id="head">
+              <div class="row">
+                <div class="col-md-12 mb-4 white-text text-center text">
+                  <h1><strong>My Pizza Place</strong></h1>
+                  <a class="btn btn-green button" href="#make-order"> Online Order</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-fluid order" id="make-order">
+    <div class="order-overlay">
+      <div class="controls-top text-center" id="Order-now"> 
+        <h2>Order Here</h2>
+      </div>
+      <h2>Your neighbourhood doordash Pizza Place. Order today for a discounted delivery!</h2>
+      <div class="row">
+          <div class="col-sm-5">
+            <form action="">
+                <label for="select">Select Flavor Options</label>
+                <select class="browser-default custom-select custom-select-md mb-3 name">
+                  <option value="Cheese Pizza">Cheese Pizza</option>
+                  <option value="Pepperoni Pizza">Pepperoni Pizza</option>
+                  <option value="Raspberry Pizza">Raspberry Pizza</option>
+                  <option value="Margherita Pizza">Margherita Pizza</option>
+                  <option value="Hawaiian Pizza">Hawaiian Pizza</option>
+                  <option value="Veggie Pizza">Veggie Pizza</option>
+                  <option value="Buffalo Pizza">Buffalo Pizza</option>
+                </select>
+              <label for="select">Select Size</label>
+              <select class="browser-default custom-select custom-select-md mb-3" id="size">
+                <option value="large">Large -- KSh. 1200</option>
+                <option value="medium">Medium -- KSh. 850</option>
+                <option value="small">Small -- KSh. 600</option>
+              </select>
+              <label for="crust">Choose your favorite Crust!</label>
+                <select class="browser-default custom-select custom-select-md mb-3" id="crust">
+                  <option value="Crispy">Crispy -- KSh. 200</option>
+                  <option value="Stuffed">Stuffed -- KSh. 150</option>
+                  <option value="Gluten-free">Gluten-free-- KSh. 180</option>
+                </select>
+              <label for="Toppings">Select Your Toppings at sh. 50 each</label><br>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                  <input type="checkbox" class="custom-control-input" id="Sausage" value="Sausage" name="toppings">
+                  <label class="custom-control-label" for="Sausage">Sausage</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                  <input type="checkbox" class="custom-control-input" id="Bacon" value="Bacon" name="toppings">
+                  <label class="custom-control-label" for="Bacon">Bacon</label>
+                </div>
+                <div class="custom-control custom-checkbox custom-control-inline">
+                  <input type="checkbox" class="custom-control-input" id="Mushrooms" value="Mushrooms" name="toppings">
+                  <label class="custom-control-label" for="Mushrooms">Mushrooms</label>
+                </div>
+                <br><br>
+              <button type="submit" class="btn btn-orange proceed">Proceed</button>
+              
+            </form>
+          </div>
+          <div class="col-sm-7">
+            <div id="information">
+              <p>Keep still, your order is being processed and you will hear from us shortly.</p>
+              <p>Enure you have the total amount for our order upon delivery delivery.</p>
+              <p>For Compliments and complaints - +254 717 037 850.</p>
+              <p id="regards">Cheers</p>
+            </div>
+            <div class="choise">
+              <h2>Your Order is:</h2>
+              <div id="your-orders">
+                <table class="table table-sm  pizzatable">
+                  <thead>
+                    <tr>
+                      <th scope="col">Name</th>
+                      <th scope="col">Size</th>
+                      <th scope="col">Crust</th>
+                      <th scope="col">Topping</th>
+                      <th scope="col">Total</th>
+                    </tr>
+                  </thead>
+                  <tbody id="ordersmade">
+                    <tr>
+                      <td id="pizzaname"></td>
+                      <td id="pizzasize"></td>
+                      <td id="pizzacrust"></td>
+                      <td id="pizzatopping"></td>
+                      <td id="totals"></td>
+                    </tr>                  
+                  </tbody>
+                </table>
+                <p id="pizzatotal"></p>
+                <p id="totalbill"></p> 
+                <p id="addedprice">Delivery will cost sh. 150</p>
+                <p id="finallmessage"></p>
+              </div>
+              <button class="btn btn-orange addPizza">Add Pizza</button>
+              <button class="btn btn-orange" id="checkout">Checkout</button>
+              <button class="btn btn-orange deliver">Home delivery?</button>
+            </div>
+            <div class="delivery">
+                <form action="">
+                  <div class="form-group">
+                    <input type="text" id="name" class="form-control mb-3" placeholder="Name">
+                    <input type="number" id="phone" class="form-control mb-3" placeholder="Pnone Number">
+                    <input type="text" id="location" class="form-control mb-3" placeholder="Location for delivery">
+                    <button class="btn btn-orange" id="final-order">Place Order</button>
+                  </div>
+                </form>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+ 
+  <script src="js/mdb.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
